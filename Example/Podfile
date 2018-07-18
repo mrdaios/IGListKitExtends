@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IGListKitExtends_Example' do
+  pod 'IGListKitExtends', :path => '../'
+
+  target 'IGListKitExtends_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
