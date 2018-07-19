@@ -7,10 +7,17 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Cell配置信息
+ */
 @protocol IGEListItemModelRepresentable <NSObject>
 
+//load from class config
 @property (nonatomic, assign, readwrite) Class cellClass;
 @property (nonatomic, copy, readwrite) NSString *cellIdentifier;
-@property (nonatomic, assign, readwrite) UINib *nib;
+
+//load from xib config
+@property (nonatomic, copy, readwrite) NSString *nibName;
+@property (nonatomic, copy, readwrite) NSBundle *bundle;
 
 @end

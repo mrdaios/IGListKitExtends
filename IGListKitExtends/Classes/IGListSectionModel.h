@@ -27,7 +27,8 @@
  - Size加载逻辑
  - Cell加载逻辑
  */
-@interface IGEListSectionController1: IGListSectionController <IGListDiffable, IGEListItemModelRepresentable>
+@interface IGEListSectionController1: IGListSectionController
+<IGListDiffable, IGEListItemModelRepresentable>
 
 /**
  any or IGListItemModelRepresentable

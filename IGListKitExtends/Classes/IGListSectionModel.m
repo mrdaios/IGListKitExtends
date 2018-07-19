@@ -27,8 +27,9 @@
 @implementation IGEListSectionController1
 
 @synthesize cellClass = _cellClass;
-@synthesize nib = _nib;
 @synthesize cellIdentifier = _cellIdentifier;
+@synthesize nibName = _nibName;
+@synthesize bundle = _bundle;
 
 - (NSInteger)numberOfItems
 {
@@ -44,21 +45,24 @@
 {
     Class cellClass = [self loadClassWith:index];
     NSString *identifier = [self loadIdentifierWith:index];
-    UINib *nib = nil;
+	NSString *nibName = [self loadNibNameWith:index];
+	NSBundle *bundle = [self loadBundleWith:index];
     
     UICollectionViewCell *cell = nil;
-    if (nib)
+    if (nibName)
     {
-        cell = [self.collectionContext dequeueReusableCellWithNibName:@"" bundle:nil forSectionController:self atIndex:index];
+        cell = [self.collectionContext dequeueReusableCellWithNibName:nibName
+															   bundle:bundle
+												 forSectionController:self
+															  atIndex:index];
     }
     else
     {
-        
+		cell = [self.collectionContext dequeueReusableCellOfClass:cellClass
+											  withReuseIdentifier:identifier
+											 forSectionController:self
+														  atIndex:index];
     }
-    
-    
-    //TODO:xib or class
-//    UICollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"IGCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
     self.cellAtIndex(cell, index);
     return cell;
 }
@@ -79,36 +83,66 @@
 
 - (Class)loadClassWith:(NSInteger)index
 {
-    Class cellClass = nil;
+    Class value = nil;
     NSObject<IGEListItemModelRepresentable> *item = self.items[index];
     if ([item conformsToProtocol:@protocol(IGEListItemModelRepresentable)])
     {
-        cellClass = item.cellClass;
+        value = item.cellClass;
     }
-    if (!cellClass)
+    if (!value)
     {
-        cellClass = self.cellClass;
+        value = self.cellClass;
     }
-    if (!cellClass)
+    if (!value)
     {
-        cellClass = [UICollectionViewCell class];
+        value = [UICollectionViewCell class];
     }
-    return cellClass;
+    return value;
 }
 
 - (NSString *)loadIdentifierWith:(NSInteger)index
 {
-    NSString *identifier = nil;
+    NSString *value = nil;
     NSObject<IGEListItemModelRepresentable> *item = self.items[index];
     if ([item conformsToProtocol:@protocol(IGEListItemModelRepresentable)])
     {
-        identifier = item.cellIdentifier;
+        value = item.cellIdentifier;
     }
-    if (!identifier)
+    if (!value)
     {
-        identifier = self.cellIdentifier;
+        value = self.cellIdentifier;
     }
-    return identifier;
+    return value;
+}
+
+- (NSString *)loadNibNameWith:(NSInteger)index
+{
+	NSString *value = nil;
+	NSObject<IGEListItemModelRepresentable> *item = self.items[index];
+	if ([item conformsToProtocol:@protocol(IGEListItemModelRepresentable)])
+	{
+		value = item.nibName;
+	}
+	if (!value)
+	{
+		value = self.nibName;
+	}
+	return value;
+}
+
+- (NSBundle *)loadBundleWith:(NSInteger)index
+{
+	NSBundle *value = nil;
+	NSObject<IGEListItemModelRepresentable> *item = self.items[index];
+	if ([item conformsToProtocol:@protocol(IGEListItemModelRepresentable)])
+	{
+		value = item.bundle;
+	}
+	if (!value)
+	{
+		value = self.bundle;
+	}
+	return value;
 }
 
 @end
