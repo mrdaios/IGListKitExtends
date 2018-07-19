@@ -7,6 +7,6 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface IGEListSectionController : IGListSectionController
+@interface IGEListSectionController : IGListSectionController<IGListDiffable>
 
 @end

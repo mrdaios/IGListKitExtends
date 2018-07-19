@@ -7,6 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol IGListItemModelRepresentable <NSObject>
+@protocol IGEListItemModelRepresentable <NSObject>
+
+@property (nonatomic, assign, readwrite) Class cellClass;
+@property (nonatomic, copy, readwrite) NSString *cellIdentifier;
+@property (nonatomic, assign, readwrite) UINib *nib;
 
 @end

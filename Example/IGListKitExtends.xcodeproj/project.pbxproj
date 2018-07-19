@@ -23,6 +23,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A3BACC08D5C9A6172C6E762B /* Pods_IGListKitExtends_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4CE53C552CEA2C78FFFB0C /* Pods_IGListKitExtends_Tests.framework */; };
+		AB0D35DA2100183F004A3AE0 /* IGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0D35D82100183F004A3AE0 /* IGCollectionViewCell.m */; };
+		AB0D35DB2100183F004A3AE0 /* IGCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0D35D92100183F004A3AE0 /* IGCollectionViewCell.xib */; };
 		B92BFD4D1DDDD2BCB477E3D4 /* Pods_IGListKitExtends_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115673683F7C067778F83B9C /* Pods_IGListKitExtends_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +41,7 @@
 /* Begin PBXFileReference section */
 		115673683F7C067778F83B9C /* Pods_IGListKitExtends_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKitExtends_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CD7D347B32B76BE16D27B6 /* Pods-IGListKitExtends_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitExtends_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitExtends_Tests/Pods-IGListKitExtends_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4B2874B98BEDCC74D267EFD2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4B2874B98BEDCC74D267EFD2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5E4CE53C552CEA2C78FFFB0C /* Pods_IGListKitExtends_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKitExtends_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* IGListKitExtends_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListKitExtends_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,11 +64,14 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB0D35D72100183F004A3AE0 /* IGCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGCollectionViewCell.h; sourceTree = "<group>"; };
+		AB0D35D82100183F004A3AE0 /* IGCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGCollectionViewCell.m; sourceTree = "<group>"; };
+		AB0D35D92100183F004A3AE0 /* IGCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGCollectionViewCell.xib; sourceTree = "<group>"; };
 		CDA4600A274EEBA26AB3487C /* Pods-IGListKitExtends_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitExtends_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitExtends_Tests/Pods-IGListKitExtends_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D62D9E19369A7E106099905F /* Pods-IGListKitExtends_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitExtends_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitExtends_Example/Pods-IGListKitExtends_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F0C1E786F217D088A0F6B23A /* Pods-IGListKitExtends_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitExtends_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitExtends_Example/Pods-IGListKitExtends_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F30BE4F604E0BD7F4F53DCEF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F6D4A110CA204770B7E9EA07 /* IGListKitExtends.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListKitExtends.podspec; path = ../IGListKitExtends.podspec; sourceTree = "<group>"; };
+		F30BE4F604E0BD7F4F53DCEF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F6D4A110CA204770B7E9EA07 /* IGListKitExtends.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IGListKitExtends.podspec; path = ../IGListKitExtends.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,9 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* IGViewController.h */,
 				6003F5A6195388D20070C39A /* IGViewController.m */,
+				AB0D35D72100183F004A3AE0 /* IGCollectionViewCell.h */,
+				AB0D35D82100183F004A3AE0 /* IGCollectionViewCell.m */,
+				AB0D35D92100183F004A3AE0 /* IGCollectionViewCell.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -280,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				AB0D35DB2100183F004A3AE0 /* IGCollectionViewCell.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -405,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0D35DA2100183F004A3AE0 /* IGCollectionViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* IGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* IGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

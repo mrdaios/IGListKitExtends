@@ -10,7 +10,7 @@
 
 @interface IGEListSectionController()
 
-@property (nonatomic, strong) IGListSectionModel *sectionModel;
+@property (nonatomic, weak) IGListSectionModel *sectionModel;
 
 @end
 
@@ -28,12 +28,23 @@
 
 - (__kindof UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index
 {
-	return nil;
+    //TODO:xib or class
+    UICollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"IGCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+    self.sectionModel.cellAtIndex(cell, index);
+	return cell;
 }
 
 - (void)didUpdateToObject:(id)object
 {
 	self.sectionModel = object;
+    self.minimumLineSpacing = 1;
+//    self.minimumInteritemSpacing = 10;
+    self.inset = UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+-(void)dealloc
+{
+    
 }
 
 @end

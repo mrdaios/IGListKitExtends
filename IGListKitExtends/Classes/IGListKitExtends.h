@@ -6,10 +6,11 @@
 //
 
 #import <IGListKit/IGListKit.h>
-#import <IGListKitExtends/IGListSectionModel.h>
+#import "IGListSectionModel.h"
+#import "IGEListItemModel.h"
 
-@interface IGListKitExtends: NSObject <IGListDiffable, IGListAdapterDataSource>
+@interface IGListKitExtends: NSObject <IGListAdapterDataSource>
 
-@property (nonatomic, strong) NSMutableArray<IGListSectionModel *> *sections;
+@property (nonatomic, strong) NSArray<IGListSectionModel *> *sections;
 
 @end
