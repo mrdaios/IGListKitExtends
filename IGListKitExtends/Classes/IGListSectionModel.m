@@ -42,8 +42,23 @@
 
 - (__kindof UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index
 {
+    Class cellClass = [self loadClassWith:index];
+    NSString *identifier = [self loadIdentifierWith:index];
+    UINib *nib = nil;
+    
+    UICollectionViewCell *cell = nil;
+    if (nib)
+    {
+        cell = [self.collectionContext dequeueReusableCellWithNibName:@"" bundle:nil forSectionController:self atIndex:index];
+    }
+    else
+    {
+        
+    }
+    
+    
     //TODO:xib or class
-    UICollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"IGCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+//    UICollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"IGCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
     self.cellAtIndex(cell, index);
     return cell;
 }
